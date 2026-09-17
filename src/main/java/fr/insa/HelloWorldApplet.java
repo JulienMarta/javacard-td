@@ -26,7 +26,7 @@ public class HelloWorldApplet extends Applet {
 
         byte[] buffer = apdu.getBuffer();
         byte cla = (byte)(buffer[ISO7816.OFFSET_CLA] & 0xFF);
-        byte ins = (byte)(buffer[ISO7816.OFFSET_INS] & 0xFF);
+        byte ins = (byte)(buffer[ISO7816.OFFSET_INS] & 0xFF)
 
         if (cla != CLA_APPLET) {
             ISOException.throwIt(ISO7816.SW_CLA_NOT_SUPPORTED);
